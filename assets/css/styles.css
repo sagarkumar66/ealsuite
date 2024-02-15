@@ -1,0 +1,41 @@
+.title{
+    color: red;
+    text-decoration: none
+}
+
+.navbar{
+    background-color: #b3ddfc
+}
+
+.navbar-brand img{
+    height: 30px;
+    width: 200px
+}
+
+.nav-link.active{
+    font-weight: 500;
+}
+
+.error{
+    color: rgb(234, 39, 39);
+}
+
+.datatable-select{
+    width: fit-content
+}
+
+footer {
+    position: fixed;
+    background-color: #b3ddfc;
+    height: 75px;
+    bottom: -20px;
+    width: 100%;
+}
+
+.login-container{
+    position: relative;
+    /* top: 20%; */
+    margin-left: 35%;
+    margin-top: 120px;
+    margin-bottom: 100px
+}
