@@ -92,10 +92,10 @@ class ApiController extends CI_Controller {
 				$customers = $this->generalModel->checkDataExists('customer', $values);
 				$err = [];
 				foreach ($customers as $key => $value) {
-					if($value['phone'] == $_POST['phone']){
+					if($value['phone'] != '' && $value['phone'] == $_POST['phone']){
 						$err['phone'] = 'Phone No already exists';
 					}
-					if($value['email'] == $_POST['email']){
+					if($value['email'] != '' && $value['email'] == $_POST['email']){
 						$err['email'] = 'Email already exists';
 					}
 				}
