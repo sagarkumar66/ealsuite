@@ -11,7 +11,7 @@
                     <label for="customer">Customer</label>
                     <select name="customer" id="customer" class="form-control" autocomplete="off" required>
                         <option value=""> -- Select a Customer -- </option>
-                        <?php foreach ($customers as $key => $value) {
+                        <?php foreach ($customer as $key => $value) {
                             echo "<option value='".$value['id']."'>".$value['name']."</option>";
                         }?>
                     </select>

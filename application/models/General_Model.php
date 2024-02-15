@@ -6,6 +6,7 @@ class General_Model extends CI_Model{
     if(count($filters)>0){
       $this->db->where($filters);
     }
+    $this->db->select($select);
     return $this->db->get($table)->result_array();
   }
 
