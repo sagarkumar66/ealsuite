@@ -8,7 +8,7 @@ Login and CRUD using PHP - Codeigniter 3
 5. Click on Mysql admin in xampp control panel
 6. Create a DB -> ealsuite_task
 7. Import the SQL file (the file name is ealsuite.sql)
-5. Go to http://localhost/ealsuite/
+8. Go to http://localhost/ealsuite/
 
 Technology used -
 
