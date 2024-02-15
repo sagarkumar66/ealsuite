@@ -32,10 +32,17 @@ footer {
     width: 100%;
 }
 
+body{
+    margin-bottom: 100px;
+}
+
+.content{
+    margin-top: 80px;
+}
+
 .login-container{
     position: relative;
-    /* top: 20%; */
     margin-left: 35%;
-    margin-top: 120px;
+    margin-top: 25vh;
     margin-bottom: 100px
 }

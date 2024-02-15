@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="https://ealsuite.com/"><img src="https://ealsuite.com/assets/img/ealsuite/ealsuite_logo.svg" alt="company-logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

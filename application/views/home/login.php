@@ -1,6 +1,6 @@
 <?php $this->load->view('layout/header.php'); ?>
 
-    <div class="container login-container">
+    <div class="container content login-container">
         <div class="card" style="width: 30vw">
             <div class="card-body">
                 <form id="login_form">
