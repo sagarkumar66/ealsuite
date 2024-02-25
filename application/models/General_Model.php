@@ -33,6 +33,7 @@ class General_Model extends CI_Model{
       $this->db->where($filters);
     }
     if(count($values)>0){
+      $this->db->select(array_keys($values));
       $this->db->group_start();
       foreach ($values as $column => $value) {
         $this->db->or_where($column, $value);
