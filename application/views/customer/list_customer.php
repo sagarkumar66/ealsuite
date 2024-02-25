@@ -1,6 +1,6 @@
 <?php $this->load->view('layout/header.php'); ?>
 <div class="container content">
-    <a href="<?php echo base_url() ?>Customer/add" class="btn btn-primary btn-sm mb-3">Add Customer</a>
+    <a href="<?php echo base_url() ?>add/customer" class="btn btn-primary btn-sm mb-3">Add Customer</a>
     <table class="table table-primary table-striped" id="customer_table">
         <thead>
             <tr>

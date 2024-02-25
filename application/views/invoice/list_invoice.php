@@ -1,6 +1,6 @@
 <?php $this->load->view('layout/header.php'); ?>
 <div class="container content">
-    <a href="<?php echo base_url() ?>Invoice/add" class="btn btn-primary btn-sm mb-3">Add Invoice</a>
+    <a href="<?php echo base_url() ?>add/invoice" class="btn btn-primary btn-sm mb-3">Add Invoice</a>
     <table class="table table-primary table-striped" id="invoice_table">
         <thead>
             <tr>
