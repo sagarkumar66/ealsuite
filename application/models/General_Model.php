@@ -2,12 +2,38 @@
 
 class General_Model extends CI_Model{
 
+  // protected $join = [
+  //   'invoice' => ['customer', 'customer.id', 'invoice.customer_id', 'left']
+  // ];
+
   public function getData($table = '', $filters = [], $select = '*'){
     if(count($filters)>0){
       $this->db->where($filters);
     }
     $this->db->select($select);
     return $this->db->get($table)->result_array();
+  }
+
+  public function getDataWithJoin($table = '', $join_table = [], $filters = []){
+    if(count($filters)>0){
+      $this->db->where($filters);
+    }
+    if(count($join_table) > 0){
+      $this->db->from($table);
+      foreach ($join_table as $key => $value) {
+        switch($key){
+          case $table:
+            $this->db->select($value);
+            break;
+          case 'invoice':
+            $this->db->select($value);
+            $this->db->join('invoice', 'invoice.customer_id = customer.id', 'inner');
+            break;
+        }
+      }
+      return $this->db->get()->result_array();
+    }
+    return [];
   }
 
   public function insertData($table = '', $data){

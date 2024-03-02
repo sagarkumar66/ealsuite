@@ -32,7 +32,7 @@ class ApiController extends CI_Controller {
 			$data[$key][] = $customer['phone'];
 			$data[$key][] = $customer['email'];
 			$data[$key][] = $customer['address'];
-			$data[$key][] = "<a href='".base_url()."Customer/edit/".$customer['id']."'><i class='fa-solid fa-pen-to-square'></i></a>";
+			$data[$key][] = "<a href='".base_url()."edit/customer/".$customer['id']."'><i class='fa-solid fa-pen-to-square'></i></a>";
 		}
 		return $data;
 	}
@@ -49,7 +49,7 @@ class ApiController extends CI_Controller {
 			$data[$key][] = $invoice['amount'];
 			$data[$key][] = $invoice['status'] == '1'?'Unpaid':($invoice['status'] == '2'?'Paid':($invoice['status'] == '3'?'Cancelled':''));
 			if($invoice['status'] == '1'){
-				$data[$key][] = "<a href='".base_url()."Invoice/edit/".$invoice['invoice_id']."'><i class='fa-solid fa-pen-to-square'></i></a>";
+				$data[$key][] = "<a href='".base_url()."edit/invoice/".$invoice['invoice_id']."'><i class='fa-solid fa-pen-to-square'></i></a>";
 			} else {
 				$data[$key][] = "--";
 			}

@@ -3,8 +3,8 @@
     <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
-            <h4 class="text-center">Add <?= ucwords($page_name) ?></h4>
-            <form id="add_module_form" class="mt-3">
+            <h4 class="text-center">Edit <?= ucwords($page_name) ?></h4>
+            <form id="edit_module_form" class="mt-3">
                 <div id="message" role="alert"></div>
                 <?php if(count($fields) > 0){ ?>
                     <?php foreach ($fields as $key => $value) { ?>
@@ -63,7 +63,7 @@
                         </div>
                     <?php } ?>
                 <?php } ?>
-                <button type="button" class="btn btn-primary" id="add_module">Add</button>
+                <button type="button" class="btn btn-primary" id="edit_module">Update</button>
             </form>
         </div>
         <div class="col-lg-3"></div>
@@ -75,13 +75,17 @@
 <script>
 
     $(document).ready(function(){
-        $('#add_module').click(() => {
-            if($('#add_module_form').valid()){
+        const form_values = <?= $values; ?>;
+        $.each(form_values, function (i, ele) {
+            $('#'+i).val(ele);
+        });
+        $('#edit_module').click(() => {
+            if($('#edit_module_form').valid()){
                 $.ajax({
-                    'url': '<?= base_url() ?>api/add/<?= $page_name ?>',
+                    'url': '<?= base_url() ?>api/edit/<?= $page_name ?>',
                     'type': "POST",
                     'dataType': 'json',
-                    'data': $('#add_module_form').serialize(),
+                    'data': $('#edit_module_form').serialize()+'&id='+<?= $this->uri->segment(3); ?>,
                     'success': function (response) {
                         $('#message').html(response.msg);
                         if(response.status){

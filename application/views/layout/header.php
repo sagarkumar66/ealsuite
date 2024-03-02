@@ -23,10 +23,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link <?php echo $page_name == 'customer' ? 'active' : ''; ?>" href="<?php echo base_url() ?>Customer">Customer</a>
+                        <a class="nav-link <?php echo $page_name == 'customer' ? 'active' : ''; ?>" href="<?php echo base_url() ?>list/customer">Customer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo $page_name == 'invoice' ? 'active' : ''; ?>" href="<?php echo base_url() ?>Invoice">Invoice</a>
+                        <a class="nav-link <?php echo $page_name == 'invoice' ? 'active' : ''; ?>" href="<?php echo base_url() ?>list/invoice">Invoice</a>
                     </li>
                     <?php if(isset($_SESSION['userName'])){ ?>
                     <li class="nav-item">
