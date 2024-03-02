@@ -33,7 +33,7 @@
                         $('#message').html(response.msg);
                         if(response.status){
                             $('#message').attr("class","alert alert-primary");
-                            window.location.href = '<?php echo base_url()?>Customer';
+                            window.location.href = '<?php echo base_url()?>list/customer';
                         } else {
                             $('#message').attr("class","alert alert-danger");
                         }

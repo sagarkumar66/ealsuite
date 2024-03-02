@@ -86,7 +86,7 @@
                         $('#message').html(response.msg);
                         if(response.status){
                             $('#message').attr("class","alert alert-primary");
-                            window.location.href = '<?= base_url().$page_name; ?>'
+                            window.location.href = '<?= base_url().'list/'.$page_name; ?>'
                         } else {
                             $('#message').attr("class","alert alert-danger");
                         }
